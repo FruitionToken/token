@@ -1,5 +1,3 @@
-# token
-fruitfulyieldtoken
 pragma solidity ^0.4.18;
 
 /**
@@ -67,7 +65,7 @@ contract ERC20 is ERC20Basic {
     event Approval(address indexed owner, address indexed spender, uint256 value);
 }
 
-contract fruitfulyieldtoken is ERC20 {
+contract FruitionToken is ERC20 {
     
     using SafeMath for uint256;
     address owner = msg.sender;
@@ -75,8 +73,8 @@ contract fruitfulyieldtoken is ERC20 {
     mapping (address => uint256) balances;
     mapping (address => mapping (address => uint256)) allowed;    
 
-    string public constant name = "FruitfulYieldToken";
-    string public constant symbol = "FFYT";
+    string public constant name = "FruitionToken";
+    string public constant symbol = "FTT";
     uint public constant decimals = 8;
     
     uint256 public totalSupply = 5000000000e8;
@@ -109,7 +107,7 @@ contract fruitfulyieldtoken is ERC20 {
     }
     
     
-    function fruitfulyieldtoken () public {
+    function FruitionToken () public {
         owner = msg.sender;    
         distr(owner, totalDistributed);
     }
